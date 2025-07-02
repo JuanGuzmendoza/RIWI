@@ -176,7 +176,7 @@ def funcion_inicio():
         #Prints para el menu
         print("\033[92m--OPCIONES--\033[0m".center(50))
         print("\033[92m--1 \033[0m Determinar el estado de aprobación")
-        print("\033[92m--2 \033[0m Calcular el promedio")
+        print("\033[92m--2 \033io[0m Calcular el promed")
         print("\033[92m--3 \033[0m Contar calificaciones mayores")
         print("\033[92m--4 \033[0m Verificar y contar calificaciones específicas")
         print("\033[92m--5 \033[0m Salir del programa")
