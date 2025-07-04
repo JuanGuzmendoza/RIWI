@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-Register</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--Login-->
+    <div class="container_login">
+        <div class="login" id="login_div">
+            <img src="https://cdn-icons-png.flaticon.com/512/4122/4122901.png">
+            <label>Loggin</label>
+            <input class="login_input" type="text" id="user"name="user" placeholder=" User" required>
+            <input class="login_input" type="password" id="password"name="password" placeholder=" Password" required>
+            <button onclick="loginUser()">
+                Sing in
+            </button>
+            <label id="errors"></label>
+        </div>
+
+    </div>
+
+</body>
+<script src="script.js"></script>
+</html>
