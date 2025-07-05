@@ -4,30 +4,30 @@ body{
     background-color: rgb(14, 13, 13);
 }
 
-h1,h5{
-    font-family: "Bebas Neue", sans-serif;
+h1,h5,li,p,h2,h3,a,label{
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     color: #FFFFFF;
+    font-weight: 300;
+
 }
 
 span{
     color:#78F1F8
 }
 
-h3,a {
-    color: #ffffff;
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    line-height: 1.6;
-}
 
 .profile_about{
-    margin-top: 20vh;
     margin-bottom: 10vh;
+    padding: 10vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background-color: #1E1E1E;
+    border-top: 2px solid #78F1F8;
+    border-bottom: 2px solid #78F1F8;
+
 }
 .resume{
     width: 30vh;
@@ -48,7 +48,7 @@ h3,a {
 }
 
 
-.nav_sections li a {
+.nav_sections a {
   padding: 10px 20px;
   background-color: #1E1E1E;
   color: #FFFFFF;
@@ -59,22 +59,45 @@ h3,a {
 }
 
 .titles_sections{
-    margin-top: 10%;
     display: flex;
     justify-content: center;
 }
-.proyect_container{
-    width: auto;
-    display: flex;
-    justify-content: center;
-    align-items: cen;
-    color: #FFFFFF;
-}
-.proyects{
-    width: 80vh;
+.project_container{
+    padding-top: 10vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: cen;
+    align-items: center;
     color: #FFFFFF;
 }
+.project{
+    width: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container_languajes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 5vh;
+}
+
+.lenguajes {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  border: 2px solid #78F1F8;
+  border-radius: 50%;     
+  object-fit: contain;
+  background-color: #ffffff; 
+}
+.contact {
+    text-align: center;
+    padding: 5vh 5vw;
+    background-color: #1E1E1E;
+    border-top: 2px solid #78F1F8;
+}
+
+
+
