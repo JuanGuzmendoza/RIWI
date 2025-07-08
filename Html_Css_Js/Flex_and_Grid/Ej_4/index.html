@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Grid con y sin repeat</title>
+  <style>
+    /* ====== Estilo base para todos los ítems ====== */
+    .item {
+      background: #444;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ====== Ejemplo 1: 4 columnas de 100px ====== */
+    .container1 {
+      display: grid;
+      grid-template-columns: 100px 100px 100px 100px; /* Sin repeat */
+      gap: 10px;
+      margin-bottom: 30px;
+      background: #eee;
+    }
+
+    .container2 {
+      display: grid;
+      grid-template-columns: repeat(4, 100px); /* Con repeat */
+      gap: 10px;
+      margin-bottom: 30px;
+      background: #eee;
+    }
+
+    /* ====== Ejemplo 2: 3 filas proporcionales ====== */
+    .container3,
+    .container4 {
+      height: 300px;
+      gap: 10px;
+      margin-bottom: 30px;
+      background: #eee;
+    }
+
+    .container3 {
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr; /* Sin repeat */
+    }
+
+    .container4 {
+      display: grid;
+      grid-template-rows: repeat(3, 1fr); /* Con repeat */
+    }
+
+    /* ====== Ejemplo 3: Mezclado con auto, fr y fijo ====== */
+    .container5 {
+      display: grid;
+      grid-template-columns: auto repeat(2, 1fr) 150px;
+      gap: 10px;
+      margin-bottom: 30px;
+      background: #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Ejemplo 1: 4 columnas de 100px</h2>
+  <h3>🔹 Sin repeat()</h3>
+  <div class="container1">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+  </div>
+
+  <h3>🔹 Con repeat()</h3>
+  <div class="container2">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+  </div>
+
+  <h2>Ejemplo 2: 3 filas proporcionales</h2>
+  <h3>🔹 Sin repeat()</h3>
+  <div class="container3">
+    <div class="item">Fila 1</div>
+    <div class="item">Fila 2</div>
+    <div class="item">Fila 3</div>
+  </div>
+
+  <h3>🔹 Con repeat()</h3>
+  <div class="container4">
+    <div class="item">Fila 1</div>
+    <div class="item">Fila 2</div>
+    <div class="item">Fila 3</div>
+  </div>
+
+  <h2>Ejemplo 3: Combinado con auto, fr y fijo</h2>
+  <div class="container5">
+    <div class="item">Logo</div>
+    <div class="item">Texto</div>
+    <div class="item">Texto</div>
+    <div class="item">Botón</div>
+  </div>
+
+</body>
+</html>
