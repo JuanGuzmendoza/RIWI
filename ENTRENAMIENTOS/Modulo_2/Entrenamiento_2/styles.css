@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    background-color: rgb(14, 13, 13);
+    margin: 0;
+    padding: 0;
+    animation: fadeSlideUp 2s ease forwards;
+}
+
+h1,h2,h3,h5,li,p,a,label {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    color: #FFFFFF;
+    font-weight: 300;
+    transition: all 0.3s ease;
+}
+
+span {
+    color: #78F1F8;
+}
+
+.profile_about {
+    margin-bottom: 10vh;
+    padding: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #1E1E1E;
+    border-top: 2px solid #78F1F8;
+    border-bottom: 2px solid #78F1F8;
+    transition: background-color 0.3s ease;
+}
+
+.resume {
+    width: 30vh;
+}
+
+.img_profile {
+    max-width: 300px;
+    max-height: 300px;
+    width: 40vw;
+    height: 40vw;
+    border: 1px solid #78F1F8;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.img_profile:hover {
+    transform: scale(1.05);
+}
+
+.nav_sections {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    padding: 0;
+}
+
+.nav_sections a {
+    padding: 10px 20px;
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+    text-decoration: none;
+    border: 2px solid #78F1F8;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.nav_sections a:hover {
+    background-color: #78F1F8;
+    color: #1E1E1E;
+    transform: scale(1.05);
+}
+
+.titles_sections {
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.project_container {
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.project {
+    width: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.container_languajes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 5vh;
+}
+
+.lenguajes {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    border: 2px solid #78F1F8;
+    border-radius: 50%;
+    object-fit: contain;
+    background-color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.lenguajes:hover {
+    transform: scale(1.1);
+}
+
+.contact {
+    text-align: center;
+    padding: 5vh 5vw;
+    background-color: #1E1E1E;
+    border-top: 2px solid #78F1F8;
+    transition: background-color 0.3s ease;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex and grid</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+   <!--
+:
+🧠 1. UNIDADES DINÁMICAS: fr y auto
+📌 ¿Qué es fr?
+fr significa "fracción del espacio disponible"
+
+👉 Sirve para dividir el espacio de forma proporcional.
+
+🎯 Ejemplo:
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+Columna 1: 1 parte
+
+Columna 2: 2 partes
+
+Columna 3: 1 parte
+
+Total: 4 partes
+
+Columna 1: 25%
+
+Columna 2: 50%
+
+Columna 3: 25%
+
+
+🔍 Este sistema es mucho más flexible que usar píxeles. Se adapta al tamaño del contenedor.
+
+📌 ¿Qué es auto?
+auto ajusta el tamaño de la columna o fila al contenido que tenga.
+
+🔍 Útil cuando:
+
+Tienes botones, textos, íconos, etc.
+
+Quieres que solo ocupen lo que necesiten, sin desperdiciar espacio.
+
+-->
+<style>
+    
+.container {
+  height: 300px;
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+  background: #eee;
+  gap: 10px;
+}
+
+.item {
+  background: royalblue;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+}
+</style>
+
+<div class="container">
+  <div class="item">Fila 1</div>
+  <div class="item">Fila 2 (más alta)</div>
+  <div class="item">Fila 3</div>
+</div>
+
+</html>
+
