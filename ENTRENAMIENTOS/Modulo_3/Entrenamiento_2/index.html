@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training M3/S2 (JS)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="product_container">
+        <h1>INVENTORY OF PRODUCTS</h1>
+
+        <!-- Product form to input new product data -->
+        <div class="product_form">
+
+            <p>PRODUCT</p>
+            <input class="product_form_input" type="text" id="form_product_name" name="form_product_name"
+                placeholder=" name of the product">
+            <input class="product_form_input" type="number" id="form_product_price" name="form_product_price"
+                placeholder=" price of the product">
+            <input class="product_form_input" type="text" id="form_product_category" name="form_product_category"
+                placeholder=" category of the product">
+
+            <!-- Button to trigger JS function to add a new product -->
+            <button onclick="add_product()">
+                Add product
+            </button>
+        </div>
+
+        <div class="producs_info">
+
+            <!-- Sidebar: List of unique product names -->
+            <div class="product_sidebar">
+                <h3>Unique Products</h3>
+                <ul id="unique_product_list"></ul>
+            </div>
+
+            <!-- Sidebar: Products grouped by category -->
+            <div class="product_sidebar">
+                <h3>Products by Category</h3>
+                <ul id="category_product_list"></ul>
+            </div>
+
+            <!-- Table displaying all products -->
+            <table id="product_table" class="product_table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Price ($)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- JS will insert product rows here -->
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+
+<!-- JS script file with logic to manage the products -->
+<script src="script.js"></script>
+
+</html>
