@@ -1,0 +1,306 @@
+/* ============================
+   ANIMACIONES INICIALES
+============================ */
+@keyframes bodyFrame {
+    0% {
+        transform: scale(0.97) translateY(20px);
+        filter: blur(5px);
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+    }
+}
+
+/* ============================
+   ESTILOS GENERALES
+============================ */
+html,
+body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: black;
+    animation: bodyFrame 1s ease-in-out;
+}
+
+/* ============================
+   NAVEGACIÓN
+============================ */
+nav {
+    display: flex;
+    align-items: center;
+    background-color: rgba(59, 62, 75, 0.342);
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+}
+
+.logo-nav {
+    height: 40px; 
+    margin-right: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #00ffff;
+}
+
+/* ============================
+   PRIMERA SECCIÓN
+============================ */
+.primera_parte {
+    position: relative;
+    padding: 200px 20px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.primera_parte::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.hostingplus.pe/wp-content/uploads/2021/11/editor_codigo.jpg');
+    background-size: cover;
+    filter: blur(2px);
+}
+
+.primera_parte .about {
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+.primera_parte h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00ffff;
+}
+
+.primera_parte h2 {
+    font-size: 2.0rem;
+    margin-bottom: 10px;
+}
+
+/* ============================
+   BOTONES
+============================ */
+.bton_contactos,
+.bton_vercursos {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.bton_vercursos {
+    background-color: #00bcd4;
+    color: white;
+}
+
+.bton_vercursos:hover {
+    background-color: #0097a7;
+}
+
+.bton_contactos {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.bton_contactos:hover {
+    background-color: white;
+    color: black;
+}
+
+
+/* ============================
+   SECCIÓN CURSOS
+============================ */
+.seccion-cursos {
+    padding: 50px 20px;
+    background-color: #121212;
+    text-align: center;
+}
+
+.seccion-cursos h2 {
+    font-size: 2rem;
+    margin: 30px 0 20px;
+    color: #00bcd4;
+    border-bottom: 2px solid #00bcd4;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.row-cursos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.curso {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+.curso:hover {
+    transform: translateY(-5px);
+}
+
+.curso img {
+    width: 200px;
+    height: 100px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.curso h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.curso p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+    color: #cccccc;
+}
+
+/* ============================
+   SOBRE NOSOTROS
+============================ */
+.sobre-nosotros {
+    background-color: #1a1a1a;
+    padding: 60px 20px;
+    color: white;
+    text-align: center;
+}
+
+.contenedor-nosotros {
+    max-width: 800px;
+    margin: auto;
+}
+
+.sobre-nosotros h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #00bcd4;
+}
+
+.sobre-nosotros h3 {
+    font-size: 1.5rem;
+    margin-top: 40px;
+    color: #00ffff;
+}
+
+.sobre-nosotros p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-top: 15px;
+}
+
+.sobre-nosotros ul {
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+
+/* ============================
+   CONTACTO
+============================ */
+.seccion-contacto {
+    padding-bottom: 5%;
+    padding-top: 1%;
+    background-color: #0e0e0e;
+    text-align: center;
+    color: white;
+}
+
+.contenedor-contacto {
+    max-width: 700px;
+    margin: auto;
+}
+
+.seccion-contacto h2 {
+    font-size: 2rem;
+    color: #00bcd4;
+    margin-bottom: 20px;
+}
+
+.info-contacto p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.redes-sociales {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.redes-sociales a {
+    text-decoration: none;
+    color: #00ffff;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.redes-sociales a:hover {
+    color: #ffffff;
+}
+
+/* ============================
+   PIE DE PÁGINA
+============================ */
+footer {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+
+    .curso img {
+        width: 100%;
+        height: auto;
+    }
+}
