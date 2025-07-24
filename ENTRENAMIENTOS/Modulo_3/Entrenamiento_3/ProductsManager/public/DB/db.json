@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "id": "j01g",
+      "userName": "Guzman",
+      "userPassword": "2874"
+    },
+    {
+      "id": "k02m",
+      "userName": "Ramirez",
+      "userPassword": "5432"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Electrónica"
+    },
+    {
+      "id": 2,
+      "name": "Ropa"
+    },
+    {
+      "id": 3,
+      "name": "Hogar"
+    }
+  ],
+  "movements":[]
+}
