@@ -43,20 +43,40 @@
   ],
   "movimientos": [
     {
-      "id": "8317",
+      "id": "c59f",
       "tipo": "compra",
-      "descripcion": "uno",
-      "importe": "-1",
-      "fecha": "1111-11-11",
+      "descripcion": "1",
+      "importe": "1",
+      "cantidad": "1123",
+      "fecha": "23123-12-31",
       "categoryId": "cf37"
     },
     {
-      "id": "898c",
+      "id": "0251",
       "tipo": "compra",
-      "descripcion": "1",
+      "descripcion": "123",
+      "cantidad": "123",
       "importe": "123",
-      "fecha": "0111-11-11",
+      "fecha": "23123-12-31",
+      "categoryId": "9b1e"
+    },
+    {
+      "id": "b0e5",
+      "tipo": "compra",
+      "descripcion": "12312",
+      "cantidad": "123",
+      "importe": "123",
+      "fecha": "23123-12-31",
       "categoryId": "45a7"
+    },
+    {
+      "id": "f8b1",
+      "tipo": "venta",
+      "descripcion": "4asd",
+      "cantidad": "4",
+      "importe": "213",
+      "fecha": "0033-12-05",
+      "categoryId": "ed6d"
     }
   ]
 }

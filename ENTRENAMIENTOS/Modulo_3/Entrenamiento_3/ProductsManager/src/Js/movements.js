@@ -28,6 +28,7 @@ formMovimientos.addEventListener("submit", function (event) {
     const newMovimiento = {
         tipo: formMovimientos.tipoMovimiento.value,
         descripcion: formMovimientos.descripcionMovimiento.value,
+        cantidad:formMovimientos.cantProdMovimiento.value,
         importe: formMovimientos.importeMovimiento.value,
         fecha: formMovimientos.fechaMovimiento.value,
         categoryId: formMovimientos.categoria.value,
@@ -68,6 +69,7 @@ formEditarMovimiento.addEventListener("submit", async function (e) {
         tipo: formEditarMovimiento.editTipoMovimiento.value,
         descripcion: formEditarMovimiento.editDescripcionMovimiento.value,
         importe: formEditarMovimiento.editImporteMovimiento.value,
+        cantidad: formEditarMovimiento.editCantidadMovimiento.value,
         fecha: formEditarMovimiento.editFechaMovimiento.value,
         categoryId: formEditarMovimiento.editCategoriaMovimiento.value,
     }
@@ -77,7 +79,7 @@ formEditarMovimiento.addEventListener("submit", async function (e) {
 
 async function updateMovimiento(movimientoActualizado) {
     try {
-        const res = await fetch(`${endpointMovimientos}/${id}`, {
+        const res = await fetch(`${endpointMovimientos}/${movimientoActualizado.id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(movimientoActualizado)
@@ -112,6 +114,7 @@ tbodyMovimientos.addEventListener('click', async (e) => {
             formEditarMovimiento.editTipoMovimiento.value = movimiento.tipo
             formEditarMovimiento.editDescripcionMovimiento.value = movimiento.descripcion
             formEditarMovimiento.editImporteMovimiento.value = movimiento.importe
+            formEditarMovimiento.editCantidadMovimiento.value = movimiento.cantidad
             formEditarMovimiento.editFechaMovimiento.value = movimiento.fecha
             
             await pintarCategorias(document.getElementById("editCategoriaMovimiento"))
@@ -151,6 +154,7 @@ async function pintarMovimientos() {
                     <td>${movimiento.tipo}</td>
                     <td>${movimiento.descripcion}</td>
                     <td>${movimiento.importe}</td>
+                    <td>${movimiento.cantidad}</td>
                     <td>${movimiento.fecha}</td>
                     <td>${movimiento.category.nameCategoria}</td>
                     <td>

@@ -42,6 +42,10 @@
         <input class="categoria_form_input" type="number" id="importeMovimiento" name="importeMovimiento"
           placeholder="Importe">
 
+
+        <input class="categoria_form_input" type="number" id="cantProdMovimiento" name="cantProdMovimiento"
+          placeholder="Cantida de producto">
+
         <input class="categoria_form_input" type="date" id="fechaMovimiento" name="fechaMovimiento">
 
         <select class="categoria_form_input" id="categoria" name="categoria">
@@ -62,6 +66,7 @@
               <th>Tipo</th>
               <th>Descripción</th>
               <th>Importe</th>
+              <th>Cantidad</th>
               <th>Fecha</th>
               <th>Categoría</th>
               <th>Acciones</th>
@@ -73,36 +78,45 @@
         </table>
       </div>
 
-      <!-- === MODAL EDITAR MOVIMIENTO === -->
-      <div id="modal-editar" class="modal">
-        <div class="modal-contenido categoria_form">
-          <h2>Editar Movimiento</h2>
-          <form id="formEditarMovimiento" class="categoria_form"> 
-            <input type="hidden" id="idMovimiento">
+<!-- === MODAL EDITAR MOVIMIENTO === -->
+<div id="modal-editar" class="modal">
+  <div class="modal-contenido categoria_form">
+    <h2>Editar Movimiento</h2>
+    <form id="formEditarMovimiento" class="categoria_form">
+      <input type="hidden" id="idMovimiento">
 
-            <select class="categoria_form_input" id="editTipoMovimiento">
-              <option value="">Selecciona tipo</option>
-              <option value="compra">Compra</option>
-              <option value="venta">Venta</option>
-            </select>
+      <label for="editTipoMovimiento" class="form-label">Tipo de movimiento</label>
+      <select class="categoria_form_input" id="editTipoMovimiento">
+        <option value="">Selecciona tipo</option>
+        <option value="compra">Compra</option>
+        <option value="venta">Venta</option>
+      </select>
 
-            <input class="categoria_form_input" type="text" id="editDescripcionMovimiento" placeholder="Descripción">
+      <label for="editDescripcionMovimiento" class="form-label">Descripción</label>
+      <input class="categoria_form_input" type="text" id="editDescripcionMovimiento" placeholder="Descripción">
 
-            <input class="categoria_form_input" type="number" id="editImporteMovimiento" placeholder="Importe">
+      <label for="editImporteMovimiento" class="form-label">Importe</label>
+      <input class="categoria_form_input" type="number" id="editImporteMovimiento" placeholder="Importe">
 
-            <input class="categoria_form_input" type="date" id="editFechaMovimiento">
+      <label for="editCantidadMovimiento" class="form-label">Cantidad</label>
+      <input class="categoria_form_input" type="number" id="editCantidadMovimiento" placeholder="Cantidad">
 
-           <select class="categoria_form_input" id="editCategoriaMovimiento">
-  <option value="">Selecciona una categoría</option>
-</select>
+      <label for="editFechaMovimiento" class="form-label">Fecha</label>
+      <input class="categoria_form_input" type="date" id="editFechaMovimiento">
 
-            <div class="modal-buttons">
-              <button type="submit">Guardar</button>
-              <button type="button" id="btnCerrarModal">Cancelar</button>
-            </div>
-          </form>
-        </div>
+      <label for="editCategoriaMovimiento" class="form-label">Categoría</label>
+      <select class="categoria_form_input" id="editCategoriaMovimiento">
+        <option value="">Selecciona una categoría</option>
+      </select>
+
+      <div class="modal-buttons">
+        <button type="submit">Guardar</button>
+        <button type="button" id="btnCerrarModal">Cancelar</button>
       </div>
+    </form>
+  </div>
+</div>
+
 
 
 
