@@ -13,17 +13,50 @@
   ],
   "categories": [
     {
-      "id": 1,
-      "name": "Electrónica"
+      "id": "cf37",
+      "nameCategoria": "123"
     },
     {
-      "id": 2,
-      "name": "Ropa"
+      "id": "68d1",
+      "nameCategoria": "adsad"
     },
     {
-      "id": 3,
-      "name": "Hogar"
+      "id": "9b1e",
+      "nameCategoria": "adsadads"
+    },
+    {
+      "id": "45a7",
+      "nameCategoria": "asd"
+    },
+    {
+      "id": "8dd4",
+      "nameCategoria": "asd"
+    },
+    {
+      "id": "e422",
+      "nameCategoria": "asd"
+    },
+    {
+      "id": "ed6d",
+      "nameCategoria": "asd"
     }
   ],
-  "movements":[]
+  "movimientos": [
+    {
+      "id": "8317",
+      "tipo": "compra",
+      "descripcion": "uno",
+      "importe": "-1",
+      "fecha": "1111-11-11",
+      "categoryId": "cf37"
+    },
+    {
+      "id": "898c",
+      "tipo": "compra",
+      "descripcion": "1",
+      "importe": "123",
+      "fecha": "0111-11-11",
+      "categoryId": "45a7"
+    }
+  ]
 }

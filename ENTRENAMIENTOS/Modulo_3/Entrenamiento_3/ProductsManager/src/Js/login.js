@@ -21,7 +21,7 @@ async function login(inputUsername, inputPassword) {
         const userFound = data[0]
         if (userFound.userPassword === inputPassword) {
             localStorage.setItem("currentUser", JSON.stringify(userFound))
-            window.location.href = "dashboard.html"
+            window.location.href = "../pages/dashboard.html"
 
 
         } else {

@@ -1,121 +1,186 @@
-/* Reset básico */
+/* =================== RESET Y TIPOGRAFÍA =================== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+html {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-size: 16px;
+}
+
 body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  display: flex;
-  height: 100vh;
-  overflow: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
 }
 
-/* Sidebar lateral */
-.sidebar {
-  width: 200px;
-  background-color: var(--azul-principal);
-  color: var(--blanco);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  box-sizing: border-box;
-  overflow-y: auto;
+h1, p {
+    color: #4262FF;
+    text-align: center;
 }
 
-.sidebar h2 {
-  font-size: 22px;
-  margin-bottom: 30px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+/* =================== CONTENEDORES =================== */
+.categoria_container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vh 5vw;
 }
 
-/* Enlaces de navegación */
-.menu-links {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.producs_info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+    margin-bottom: 2rem;
 }
 
-.menu-links a {
-  color: var(--blanco);
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: background-color 0.3s ease;
+/* =================== FORMULARIO =================== */
+.categoria_form {
+    width: 100%;
+    max-width: 600px;
+    background-color: #F0F4FF;
+    border: 1px solid #D8DEFF;
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
 }
 
-.menu-links a:hover {
-  background-color: var(--azul-secundario);
+.categoria_form_input {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.5rem;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 1rem;
 }
 
-/* Cerrar sesión */
-.logout a {
-  color: var(--blanco);
-  text-decoration: none;
-  padding: 10px;
-  border: 1px solid var(--blanco);
-  border-radius: 4px;
-  display: inline-block;
-  transition: background-color 0.3s ease, color 0.3s ease;
+/* =================== BOTONES =================== */
+button {
+    background-color: #4262FF;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.logout a:hover {
-  background-color: var(--blanco);
-  color: var(--azul-principal);
+button:hover {
+    background-color: #314bcc;
 }
 
-/* Contenido principal */
-.main-content {
-  margin-left: 200px; /* evita que el contenido quede debajo del sidebar */
-  padding: 30px;
-  height: 100vh;
-  overflow-y: auto;
-  box-sizing: border-box;
-}
-.simple-table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: var(--blanco);
-  color: var(--azul-principal);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  border: 1px solid var(--azul-secundario);
-  border-radius: 6px;
-  overflow: hidden;
-  margin-top: 20px;
+.modal-buttons button {
+    flex: 1;
+    margin: 0 5px;
 }
 
-.simple-table th,
-.simple-table td {
-  padding: 12px 16px;
-  text-align: left;
-  border-bottom: 1px solid var(--azul-suave);
+/* =================== TABLA =================== */
+.categoria_table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    border: 2px solid #4262FF;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    background-color: white;
 }
 
-.simple-table thead {
-  background-color: var(--azul-secundario);
-  color: var(--blanco);
+.categoria_table th,
+.categoria_table td {
+    padding: 0.75rem;
+    border: 1px solid #d8deff;
+    text-align: center;
+    font-size: 0.95rem;
 }
 
-.simple-table tbody tr:hover {
-  background-color: var(--azul-suave);
+.categoria_table th {
+    background-color: #f0f4ff;
+    font-weight: 500;
 }
 
-/* Contenido principal */
-.main-content {
-  margin-left: 200px; /* evita que el contenido quede debajo del sidebar */
-  padding: 30px;
-  height: 100vh;
-  overflow-y: auto;
-  box-sizing: border-box;
+.categoria_table tr:hover {
+    background-color: #eef4ff;
 }
-.menu-links a.active {
-  background-color: var(--blanco);
-  color: var(--azul-principal);
-  font-weight: bold;
+
+/* =================== MODAL =================== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-contenido {
+    background-color: #F0F4FF;
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* =================== RESPONSIVE =================== */
+@media (max-width: 768px) {
+    .producs_info {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .categoria_form {
+        padding: 1.5rem;
+    }
+
+    .categoria_table {
+        font-size: 0.85rem;
+    }
+
+    .categoria_form_input {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .categoria_table th, .categoria_table td {
+        padding: 0.5rem;
+    }
 }
