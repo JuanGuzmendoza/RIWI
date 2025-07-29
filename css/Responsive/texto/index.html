@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html { font-size: 16px; }
+
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: sans-serif;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background: lightblue;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 576px) {
+      html { font-size: 14px; }
+
+      body { padding: 1rem; }
+
+      h1 { font-size: 1.5rem; }
+
+      .card {
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+      }
+    }
+  </style>
+  <title>Espacios con REM</title>
+</head>
+<body>
+  <h1>¡Hola Juan!</h1>
+  <p>Este es un ejemplo de cómo usar `rem` para padding y texto de forma responsive.</p>
+  <div class="card">Tarjeta 1</div>
+  <div class="card">Tarjeta 2</div>
+</body>
+</html>

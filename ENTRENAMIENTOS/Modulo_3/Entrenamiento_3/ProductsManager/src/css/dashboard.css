@@ -1,48 +1,71 @@
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    height: 100vh;
-    overflow: hidden;
-    background-color: var(--azul-suave);
-  }
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--azul-suave);
+}
 
+.cards-reportes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card-report {
+  background-color: #ffffff;
+  color: var(--azul-principal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-width: 100%;
+  min-height: 180px;
+}
+
+.card-report:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-report h1 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-report h2 {
+  color: #3987d4;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 500px) {
   .cards-reportes {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    align-items: center;
-    justify-items: center;
-    gap: 20px;
-    background-color: var(--azul-suave);
-    padding: 20px;
-    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 12px;
   }
 
   .card-report {
-    background-color: #ffffff;
-    height: 200px;
-    width: 100%;
-    color: var(--blanco);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    min-height: 150px;
   }
 
   .card-report h1 {
-    color: var(--azul-principal);
+    font-size: 1.1rem;
   }
 
   .card-report h2 {
-    color: #3987d4;
+    font-size: 0.95rem;
   }
-
-  /* Media query para pantallas pequeñas */
-  @media (max-width: 500px) {
-    .cards-reportes {
-      grid-template-columns: 1fr;
-    }
-  }
+}
