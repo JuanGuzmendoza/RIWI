@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categories</title>
-    <link rel="stylesheet" href="../css/categories.css" />
+    <link rel="stylesheet" href="../css/vistasCruds.css" />
     <link rel="stylesheet" href="../css/sidebar.css" />
     <link rel="stylesheet" href="../css/global.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
@@ -14,6 +14,7 @@
 </head>
 
 <body>
+  <div class="container-layout">
 
     <div id="sidebar">
         <!-- Div donde se carga el sidebar dinamicamente-->
@@ -30,7 +31,7 @@
 
                     <p>Formulario</p>
                     <input class="categoria_form_input" type="text" id="categoriaName" name="categoriaName"
-                        placeholder="Nombre de la categoria">
+                        placeholder="Nombre de la categoria" required>
 
                     <!-- Button to trigger JS function to add a new categoria -->
                     <button type="submit">
@@ -75,7 +76,7 @@
         </div>
 
     </div>
-
+  </div>
 
 </body>
 <script type="module" src="../Js/categories.js"></script>

@@ -21,10 +21,6 @@
       "nameCategoria": "adsad"
     },
     {
-      "id": "9b1e",
-      "nameCategoria": "adsadads"
-    },
-    {
       "id": "45a7",
       "nameCategoria": "asd"
     },
@@ -39,6 +35,14 @@
     {
       "id": "ed6d",
       "nameCategoria": "asd"
+    },
+    {
+      "id": "e6c8",
+      "nameCategoria": "asdasd"
+    },
+    {
+      "id": "a42d",
+      "nameCategoria": "adasdadasdasdads"
     }
   ],
   "movimientos": [
@@ -58,7 +62,7 @@
       "cantidad": "123",
       "importe": "123",
       "fecha": "23123-12-31",
-      "categoryId": "9b1e"
+      "categoryId": "cf37"
     },
     {
       "id": "b0e5",
@@ -77,6 +81,24 @@
       "importe": "213",
       "fecha": "0033-12-05",
       "categoryId": "ed6d"
+    },
+    {
+      "id": "681d",
+      "tipo": "compra",
+      "descripcion": "asd",
+      "cantidad": "123",
+      "importe": "123",
+      "fecha": "2005-10-10",
+      "categoryId": "cf37"
+    },
+    {
+      "id": "e082",
+      "tipo": "compra",
+      "descripcion": "compra",
+      "cantidad": "1111111111111",
+      "importe": "11231232313",
+      "fecha": "2005-10-10",
+      "categoryId": "cf37"
     }
   ]
 }

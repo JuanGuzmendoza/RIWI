@@ -15,19 +15,60 @@
 
 
 <body>
+  <div class="container-layout">
+    <div id="sidebar">
+      <!-- Div donde se carga el sidebar dinamicamente-->
+    </div>
 
-  <div id="sidebar">
-    <!-- Div donde se carga el sidebar dinamicamente-->
+
+    <div class="main-content">
+      <h1 style="color: var(--azul-principal); text-align: center; margin-bottom: 20px;">
+        Vista de reportes
+      </h1>
+      <div class="cards-reportes">
+
+        <div class="cards-reportes" id="cartasReportes">
+          <div class="card-report">
+            <h1>Cantidad de compras</h1>
+            <h2 id="infoCompras">Cargando...</h2>
+          </div>
+
+          <div class="card-report">
+            <h1>Cantidad de ventas</h1>
+            <h2 id="infoVentas">Cargando...</h2>
+          </div>
+
+          <div class="card-report">
+            <h1>Categoría con mayor ventas</h1>
+            <h2 id="cateMayorVentas">Cargando...</h2>
+          </div>
+
+          <div class="card-report">
+            <h1>Categoría con mayor compras</h1>
+            <h2 id="cateMayorCompras">Cargando...</h2>
+          </div>
+
+          <div class="card-report">
+            <h1>Mes con más compras</h1>
+            <h2 id="mesMayorCompras">Cargando...</h2>
+          </div>
+
+          <div class="card-report">
+            <h1>Mes con más ventas</h1>
+            <h2 id="mesMayorVentas">Cargando...</h2>
+          </div>
+
+        </div>
+
+
+
+
+      </div>
+
+    </div>
+
   </div>
-
-
-  <div class="main-content">
-
-    <h1>REPORTES</h1>
-
-  </div>
-
-
 </body>
-  <script type="module" src="../Js/dashboard.js"></script>
+<script type="module" src="../Js/dashboard.js"></script>
+
 </html>

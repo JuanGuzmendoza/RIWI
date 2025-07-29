@@ -20,6 +20,8 @@ async function paintTableCategorias() {
     tableCategorias.innerHTML = ""
     try {
         const categorias = await obtainCategorias();
+
+
         for (let categoria of categorias) {
             tableCategorias.innerHTML += `
                 <tr>

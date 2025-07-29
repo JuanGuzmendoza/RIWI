@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Movements</title>
-  <link rel="stylesheet" href="../css/categories.css" />
+  <link rel="stylesheet" href="../css/vistasCruds.css" />
   <link rel="stylesheet" href="../css/sidebar.css" />
   <link rel="stylesheet" href="../css/global.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
@@ -14,115 +14,119 @@
 </head>
 
 <body>
+  <div class="container-layout">
 
-  <div id="sidebar">
-    <!-- Div donde se carga el sidebar dinamicamente-->
-  </div>
-
-
-  <div class="main-content">
-
-    <div class="categoria_container">
-      <h1>CRUD MOVIMIENTOS</h1>
-
-      <!-- categoria form to input new categoria data -->
-      <!-- === FORMULARIO MOVIMIENTOS === -->
-      <form id="form-movimiento" class="categoria_form">
-        <p>Agregar Movimiento</p>
-
-        <select class="categoria_form_input" id="tipoMovimiento" name="tipoMovimiento">
-          <option value="">Selecciona tipo</option>
-          <option value="compra">Compra</option>
-          <option value="venta">Venta</option>
-        </select>
-
-        <input class="categoria_form_input" type="text" id="descripcionMovimiento" name="descripcionMovimiento"
-          placeholder="Descripción">
-
-        <input class="categoria_form_input" type="number" id="importeMovimiento" name="importeMovimiento"
-          placeholder="Importe">
+    <div id="sidebar">
+      <!-- Div donde se carga el sidebar dinamicamente-->
+    </div>
 
 
-        <input class="categoria_form_input" type="number" id="cantProdMovimiento" name="cantProdMovimiento"
-          placeholder="Cantida de producto">
+    <div class="main-content">
 
-        <input class="categoria_form_input" type="date" id="fechaMovimiento" name="fechaMovimiento">
+      <div class="categoria_container">
+        <h1>CRUD MOVIMIENTOS</h1>
 
-        <select class="categoria_form_input" id="categoria" name="categoria">
-          <option disabled selected>Seleccione una categoría</option>
-          <!-- Aquí se pintan las opciones desde JS -->
-        </select>
+        <!-- categoria form to input new categoria data -->
+        <!-- === FORMULARIO MOVIMIENTOS === -->
+        <form id="form-movimiento" class="categoria_form">
+          <p>Agregar Movimiento</p>
 
-        <button type="submit">
-          Añadir Movimiento
-        </button>
-      </form>
+          <select class="categoria_form_input" id="tipoMovimiento" name="tipoMovimiento">
+            <option value="">Selecciona tipo</option>
+            <option value="compra">Compra</option>
+            <option value="venta">Venta</option>
+          </select>
 
-      <!-- === TABLA MOVIMIENTOS === -->
-      <div class="producs_info">
-        <table class="categoria_table">
-          <thead>
-            <tr>
-              <th>Tipo</th>
-              <th>Descripción</th>
-              <th>Importe</th>
-              <th>Cantidad</th>
-              <th>Fecha</th>
-              <th>Categoría</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody id="tbody-movimientos">
-            <!-- JS insertará aquí las filas -->
-          </tbody>
-        </table>
+          <input class="categoria_form_input" type="text" id="descripcionMovimiento" name="descripcionMovimiento"
+            placeholder="Descripción" required>
+
+          <input class="categoria_form_input" type="number" id="importeMovimiento" name="importeMovimiento"
+            placeholder="Importe" required>
+
+
+          <input class="categoria_form_input" type="number" id="cantProdMovimiento" name="cantProdMovimiento"
+            placeholder="Cantida de producto" required>
+
+          <input class="categoria_form_input" type="date" id="fechaMovimiento" name="fechaMovimiento" required>
+
+          <select class="categoria_form_input" id="categoria" name="categoria" required>
+            <option disabled selected>Seleccione una categoría</option>
+            <!-- Aquí se pintan las opciones desde JS -->
+          </select>
+
+          <button type="submit">
+            Añadir Movimiento
+          </button>
+        </form>
+
+        <!-- === TABLA MOVIMIENTOS === -->
+        <div class="producs_info">
+          <table class="categoria_table">
+            <thead>
+              <tr>
+                <th>Tipo</th>
+                <th>Descripción</th>
+                <th>Importe</th>
+                <th>Cantidad</th>
+                <th>Fecha</th>
+                <th>Categoría</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-movimientos">
+              <!-- JS insertará aquí las filas -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- === MODAL EDITAR MOVIMIENTO === -->
+        <div id="modal-editar" class="modal">
+          <div class="modal-contenido categoria_form">
+            <h2>Editar Movimiento</h2>
+            <form id="formEditarMovimiento" class="categoria_form">
+              <input type="hidden" id="idMovimiento">
+
+              <label for="editTipoMovimiento" class="form-label">Tipo de movimiento</label>
+              <select class="categoria_form_input" id="editTipoMovimiento">
+                <option value="">Selecciona tipo</option>
+                <option value="compra">Compra</option>
+                <option value="venta">Venta</option>
+              </select>
+
+              <label for="editDescripcionMovimiento" class="form-label">Descripción</label>
+              <input class="categoria_form_input" type="text" id="editDescripcionMovimiento" placeholder="Descripción"
+                required>
+
+              <label for="editImporteMovimiento" class="form-label">Importe</label>
+              <input class="categoria_form_input" type="number" id="editImporteMovimiento" placeholder="Importe"
+                required>
+
+              <label for="editCantidadMovimiento" class="form-label">Cantidad</label>
+              <input class="categoria_form_input" type="number" id="editCantidadMovimiento" placeholder="Cantidad"
+                required>
+
+              <label for="editFechaMovimiento" class="form-label">Fecha</label>
+              <input class="categoria_form_input" type="date" id="editFechaMovimiento" required>
+
+              <label for="editCategoriaMovimiento" class="form-label">Categoría</label>
+              <select class="categoria_form_input" id="editCategoriaMovimiento">
+                <option value="">Selecciona una categoría</option>
+              </select>
+
+              <div class="modal-buttons">
+                <button type="submit">Guardar</button>
+                <button type="button" id="btnCerrarModal">Cancelar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+
+
+
       </div>
-
-<!-- === MODAL EDITAR MOVIMIENTO === -->
-<div id="modal-editar" class="modal">
-  <div class="modal-contenido categoria_form">
-    <h2>Editar Movimiento</h2>
-    <form id="formEditarMovimiento" class="categoria_form">
-      <input type="hidden" id="idMovimiento">
-
-      <label for="editTipoMovimiento" class="form-label">Tipo de movimiento</label>
-      <select class="categoria_form_input" id="editTipoMovimiento">
-        <option value="">Selecciona tipo</option>
-        <option value="compra">Compra</option>
-        <option value="venta">Venta</option>
-      </select>
-
-      <label for="editDescripcionMovimiento" class="form-label">Descripción</label>
-      <input class="categoria_form_input" type="text" id="editDescripcionMovimiento" placeholder="Descripción">
-
-      <label for="editImporteMovimiento" class="form-label">Importe</label>
-      <input class="categoria_form_input" type="number" id="editImporteMovimiento" placeholder="Importe">
-
-      <label for="editCantidadMovimiento" class="form-label">Cantidad</label>
-      <input class="categoria_form_input" type="number" id="editCantidadMovimiento" placeholder="Cantidad">
-
-      <label for="editFechaMovimiento" class="form-label">Fecha</label>
-      <input class="categoria_form_input" type="date" id="editFechaMovimiento">
-
-      <label for="editCategoriaMovimiento" class="form-label">Categoría</label>
-      <select class="categoria_form_input" id="editCategoriaMovimiento">
-        <option value="">Selecciona una categoría</option>
-      </select>
-
-      <div class="modal-buttons">
-        <button type="submit">Guardar</button>
-        <button type="button" id="btnCerrarModal">Cancelar</button>
-      </div>
-    </form>
-  </div>
-</div>
-
-
-
-
     </div>
   </div>
-
 
 </body>
 <script type="module" src="../Js/movements.js"></script>
