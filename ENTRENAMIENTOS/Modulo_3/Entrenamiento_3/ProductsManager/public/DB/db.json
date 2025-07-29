@@ -1,0 +1,104 @@
+{
+  "users": [
+    {
+      "id": "j01g",
+      "userName": "Guzman",
+      "userPassword": "2874"
+    },
+    {
+      "id": "k02m",
+      "userName": "Ramirez",
+      "userPassword": "5432"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cf37",
+      "nameCategoria": "123"
+    },
+    {
+      "id": "68d1",
+      "nameCategoria": "adsad"
+    },
+    {
+      "id": "45a7",
+      "nameCategoria": "asd"
+    },
+    {
+      "id": "8dd4",
+      "nameCategoria": "asd"
+    },
+    {
+      "id": "e422",
+      "nameCategoria": "asd"
+    },
+    {
+      "id": "ed6d",
+      "nameCategoria": "asd"
+    },
+    {
+      "id": "e6c8",
+      "nameCategoria": "asdasd"
+    },
+    {
+      "id": "a42d",
+      "nameCategoria": "adasdadasdasdads"
+    }
+  ],
+  "movimientos": [
+    {
+      "id": "c59f",
+      "tipo": "compra",
+      "descripcion": "1",
+      "importe": "1",
+      "cantidad": "1123",
+      "fecha": "23123-12-31",
+      "categoryId": "cf37"
+    },
+    {
+      "id": "0251",
+      "tipo": "compra",
+      "descripcion": "123",
+      "cantidad": "123",
+      "importe": "123",
+      "fecha": "23123-12-31",
+      "categoryId": "cf37"
+    },
+    {
+      "id": "b0e5",
+      "tipo": "compra",
+      "descripcion": "12312",
+      "cantidad": "123",
+      "importe": "123",
+      "fecha": "23123-12-31",
+      "categoryId": "45a7"
+    },
+    {
+      "id": "f8b1",
+      "tipo": "venta",
+      "descripcion": "4asd",
+      "cantidad": "4",
+      "importe": "213",
+      "fecha": "0033-12-05",
+      "categoryId": "ed6d"
+    },
+    {
+      "id": "681d",
+      "tipo": "compra",
+      "descripcion": "asd",
+      "cantidad": "123",
+      "importe": "123",
+      "fecha": "2005-10-10",
+      "categoryId": "cf37"
+    },
+    {
+      "id": "e082",
+      "tipo": "compra",
+      "descripcion": "compra",
+      "cantidad": "1111111111111",
+      "importe": "11231232313",
+      "fecha": "2005-10-10",
+      "categoryId": "cf37"
+    }
+  ]
+}

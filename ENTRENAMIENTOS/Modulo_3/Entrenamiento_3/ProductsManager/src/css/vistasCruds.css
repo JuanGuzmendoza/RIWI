@@ -1,0 +1,195 @@
+/* =================== RESET Y TIPOGRAFÍA =================== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+html {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1, p {
+    color: #4262FF;
+    text-align: center;
+}
+
+/* =================== CONTENEDORES =================== */
+.categoria_container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vh 5vw;
+}
+
+.producs_info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* =================== FORMULARIO =================== */
+.categoria_form {
+    width: 100%;
+    max-width: 600px;
+    background-color: #F0F4FF;
+    border: 1px solid #D8DEFF;
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.categoria_form_input {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.5rem;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+.form-label {
+    align-self: flex-start;
+    font-weight: 500;
+    color: #314bcc;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+    margin-bottom: -0.5rem;
+    padding-left: 5px;
+}
+
+/* =================== BOTONES =================== */
+button {
+    background-color: #4262FF;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #314bcc;
+}
+
+.modal-buttons button {
+    flex: 1;
+    margin: 0 5px;
+}
+
+/* =================== TABLA =================== */
+.categoria_table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    border: 2px solid #4262FF;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    background-color: white;
+}
+
+.categoria_table th,
+.categoria_table td {
+    padding: 0.75rem;
+    border: 1px solid #d8deff;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.categoria_table th {
+    background-color: #f0f4ff;
+    font-weight: 500;
+}
+
+.categoria_table tr:hover {
+    background-color: #eef4ff;
+}
+
+/* =================== MODAL =================== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-contenido {
+    background-color: #F0F4FF;
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* =================== RESPONSIVE =================== */
+@media (max-width: 768px) {
+    .producs_info {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .categoria_form {
+        padding: 1.5rem;
+    }
+
+    .categoria_table {
+        font-size: 0.85rem;
+    }
+
+    .categoria_form_input {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .categoria_table th, .categoria_table td {
+        padding: 0.5rem;
+    }
+}

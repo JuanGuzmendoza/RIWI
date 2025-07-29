@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="../css/sidebar.css">
+  <link rel="stylesheet" href="../css/global.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <script type="module" src="../Js/guardian.js"></script>
+
+</head>
+
+
+<body>
+  <div class="container-layout">
+    <div id="sidebar">
+      <!-- Div donde se carga el sidebar dinamicamente-->
+    </div>
+
+
+    <div class="main-content">
+      <h1 style="color: var(--azul-principal); text-align: center; margin-bottom: 20px;">
+        Vista de reportes
+      </h1>
+      <div class="cards-reportes">
+
+        <div class="cards-reportes" id="cartasReportes">
+          <div class="card-report">
+            <h1>Cantidad de compras</h1>
+            <h2 id="infoCompras">Cargando...</h2>
+          </div>
+
+          <div class="card-report">
+            <h1>Cantidad de ventas</h1>
+            <h2 id="infoVentas">Cargando...</h2>
+          </div>
+
+          <div class="card-report">
+            <h1>Categoría con mayor ventas</h1>
+            <h2 id="cateMayorVentas">Cargando...</h2>
+          </div>
+
+          <div class="card-report">
+            <h1>Categoría con mayor compras</h1>
+            <h2 id="cateMayorCompras">Cargando...</h2>
+          </div>
+
+          <div class="card-report">
+            <h1>Mes con más compras</h1>
+            <h2 id="mesMayorCompras">Cargando...</h2>
+          </div>
+
+          <div class="card-report">
+            <h1>Mes con más ventas</h1>
+            <h2 id="mesMayorVentas">Cargando...</h2>
+          </div>
+
+        </div>
+
+
+
+
+      </div>
+
+    </div>
+
+  </div>
+</body>
+<script type="module" src="../Js/dashboard.js"></script>
+
+</html>

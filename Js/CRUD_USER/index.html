@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <form class="container" id="formUser">
+        <h1>Usuarios</h1>
+        <div class="mb-3">
+            <label for="role" class="form-label">Role</label>
+            <input type="text" class="form-control" id="role" name="role" aria-describedby="roleHelp" required>
+            <div id="roleHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name"name="name" aria-describedby="nameHelp"required>
+            <div id="nameHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Correo </label>
+            <input type="email" class="form-control" id="email"name="email" aria-describedby="emailHelp"required>
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password" name="password" aria-describedby="passwordHelp"required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Foto</label>
+            <input type="text" class="form-control" id="foto" name="foto" aria-describedby="fotoHelp"required>
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+
+    <br>
+    <main class="container">
+
+        <table class="table table-bordered align-middle text-center">
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Foto</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider" id="tableBody">
+                <tr>
+                    <th scope="row">1</th>
+                    <td>admin</td>
+                    <td>pepito</td>
+                    <td>juan@gmail.com</td>
+                    <td>
+                        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="rounded-circle"
+                            style="width: 50px; height: 50px;">
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </main>
+</body>
+<script src="main.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+</html>
