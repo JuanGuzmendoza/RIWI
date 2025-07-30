@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movements</title>
+
+  <!-- Estilos globales y específicos -->
+  <link rel="stylesheet" href="../css/balance.css" />
+
+  <link rel="stylesheet" href="../css/global.css" />
+
+  <link rel="stylesheet" href="../css/sidebar.css" />
+
+  <!-- Iconos de Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Protección de acceso -->
+  <script type="module" src="../Js/guardian.js"></script>
+</head>
+
+<body>
+  <div class="container-layout">
+
+    <!-- Sidebar dinámico -->
+    <div id="sidebar"></div>
+
+    <div class="main-content">
+
+      <div class="containerCarts">
+
+        <div class="containerFirstRow">
+
+          <div class="cardBalance">
+            <h1>Balance</h1>
+            <h2>Earnings<p id="earnigs"></p></h2>
+            <h2>Bills<p id="bills"></p></h2>
+            <h2>Total<p id="total"></p></h2>
+
+          </div>
+
+          <div class="cardFiltros">
+            <h1>Filters</h1>
+          <select class="categoria_form_input">
+              <option value="">Select tipo</option>
+            </select>
+          <select class="categoria_form_input" >
+              <option value="">Select Category</option>
+            </select>           
+          <select class="categoria_form_input" >
+              <option value="">Ordenar por:</option>
+              <option value="Spent">Spent</option>
+              <option value="gain">gain</option>
+            </select>
+          </div>
+
+        </div>
+
+
+        <div class="containerSecondRow">
+
+          <div class="containerTable">
+            <h1>CRUD PROCESSES</h1>
+            <button id="btnModalCreateProcess"><i class="bi bi-plus-circle"></i> Add Process</button>
+
+            <table class="categoria_table">
+              <thead>
+                <tr>
+                  <th>Descripción</th>
+                  <th>Categoría</th>
+                  <th>Fecha</th>
+                  <th>Importe</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-processes">
+
+              </tbody>
+            </table>
+
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+
+
+
+      <div id="modal-create" class="modal">
+        <div class="modal-contenido categoria_form">
+          <h2>Form Add Process</h2>
+
+          <form id="form-processes" >
+
+              <label for="editDescriptionProcess" class="form-label">Description</label>
+            <input class="categoria_form_input" type="text" id="createDescriptionProcess" placeholder="Description"
+              required>
+
+            <label for="editAmoutProcess" class="form-label">Amount</label>
+            <input class="categoria_form_input" type="number" id="createAmoutProcess" placeholder="Amount" required>
+
+
+            <label for="editTipProcess" class="form-label">Tipe for Processes</label>
+            <select class="categoria_form_input" id="createTipProcess">
+              <option value="">Select type</option>
+              <option value="Spent">Spent</option>
+              <option value="gain">gain</option>
+            </select>
+
+            <label for="editDateProcess" class="form-label">Date</label>
+            <input class="categoria_form_input" type="date" id="createDateProcess" required>
+
+
+            <label for="editCategoryProcess" class="form-label">Category</label>
+            <select class="categoria_form_input" id="createCategoryProcess" required>
+              <option value="">Select Category</option>
+            </select>
+
+            <button type="submit">Add Process</button>
+            <button type="button" id="btnCerrarModalCreate">Cancel</button>
+
+          </form>
+        </div>
+      </div>
+
+      <!-- === MODAL PARA EDITAR MOVIMIENTO === -->
+      <div id="modal-editar" class="modal">
+        <div class="modal-contenido categoria_form">
+          <h2>Editar Movimiento</h2>
+          <form id="formEditProcess" >
+            <input type="hidden" id="idProcess">
+
+            <label for="editDescriptionProcess" class="form-label">Description</label>
+            <input class="categoria_form_input" type="text" id="editDescriptionProcess" placeholder="Description"
+              required>
+
+            <label for="editAmoutProcess" class="form-label">Amount</label>
+            <input class="categoria_form_input" type="number" id="editAmoutProcess" placeholder="Importe" required>
+
+
+            <label for="editTipProcess" class="form-label">Tipe for Processes</label>
+            <select class="categoria_form_input" id="editTipProcess">
+              <option value="">Select type</option>
+              <option value="Spent">Spent</option>
+              <option value="gain">gain</option>
+            </select>
+
+            <label for="editDateProcess" class="form-label">Date</label>
+            <input class="categoria_form_input" type="date" id="editDateProcess" required>
+
+
+            <label for="editCategoryProcess" class="form-label">Category</label>
+            <select class="categoria_form_input" id="editCategoryProcess">
+              <option value="">Select Category</option>
+            </select>
+
+            <div class="modal-buttons">
+              <button type="submit">Save</button>
+              <button type="button" id="btnCerrarModal">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script type="module" src="../Js/balances.js"></script>
+
+  <!-- Script con lógica CRUD de movimientos -->
+</body>
+
+</html>

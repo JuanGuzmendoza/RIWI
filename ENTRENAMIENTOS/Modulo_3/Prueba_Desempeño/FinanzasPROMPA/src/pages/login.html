@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Metadatos para SEO y autoría -->
+  <meta name="description" content="Sistema de gestión de gastos personales." />
+  <meta name="keywords" content="Gestion, Operaciones, Categorias, login, Reportes" />
+  <meta name="organization" content="Sistema de Gestión de Gastos Persoanles" />
+  <meta name="author" content="Juan David Guzman" />
+  <meta name="designer" content="Juan David Guzman" />
+  <meta name="copyright" content="© 2025 Juan David Guzman. Todos los derechos reservados." />
+  <meta name="robots" content="index,follow" />
+  <meta name="googlebot" content="index,follow" />
+  <meta name="revisit-after" content="15 days" />
+
+  <!-- Ícono de pestaña -->
+  <link rel="icon" href="/icons/cart-minus.png" type="image/x-icon" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="../css/login.css" />
+  <link rel="stylesheet" href="../css/global.css" />
+
+  <title>Iniciar Sesión | Gestión de Productos</title>
+</head>
+
+<body>
+  <main>
+    <div class="container_form">
+      <!-- Formulario de login -->
+      <form class="form" id="loginForm" onsubmit="event.preventDefault(); loginUser();">
+        <img src="/img/bolsaDInero.png" alt="Ícono de login" />
+        <h1>Iniciar Sesión</h1>
+
+        <!-- Campo de usuario -->
+        <input class="form_input" type="text" id="userName" name="userName" placeholder="Nombre" required />
+
+        <!-- Campo de contraseña -->
+        <input class="form_input" type="password" id="userPassword" name="userPassword" placeholder="Contraseña" required />
+
+        <button type="submit">Entrar</button>
+
+        <!-- Aquí se muestran errores de validación -->
+        <p id="errors" aria-live="polite"></p>
+      </form>
+    </div>
+  </main>
+
+  <!-- Script de autenticación -->
+  <script type="module" src="../Js/login.js"></script>
+</body>
+
+</html>

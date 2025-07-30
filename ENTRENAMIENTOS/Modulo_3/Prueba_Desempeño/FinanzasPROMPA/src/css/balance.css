@@ -1,0 +1,133 @@
+
+
+html {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Main container where the cards are structured */
+.containerCarts {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.containerFirstRow {
+    width: 30%;
+    height: 100%;
+}
+/* letter where the analytics data is  */
+.cardBalance{
+    padding-left: 10px;
+    border: 1px solid #000dff27;
+    box-shadow: 0 .5em 1em -.125em rgba(125, 125, 177, 0.349),0 0 0 1px rgba(27, 7, 250, 0.02);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    height: auto;
+}
+h1{
+    color: #4A4A4A;
+    text-align: center;
+}
+.cardBalance p{
+    color: #4A4A4A;
+}
+/* === FILTER CARDS === */
+.cardFiltros{
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    border: 1px solid #000dff27;
+    box-shadow: 0 .5em 1em -.125em rgba(125, 125, 177, 0.349),0 0 0 1px rgba(27, 7, 250, 0.02);
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 50px;
+}
+.cardFiltros select{
+    display: flex;
+    width: 50%;
+    background-color: white;
+}
+
+/* === SECOND ROW === */
+/* Second card where the table is*/
+.containerSecondRow {
+    max-height: 800px;
+    border: 1px solid #000dff27;
+    box-shadow: 0 .5em 1em -.125em rgba(125, 125, 177, 0.349),0 0 0 1px rgba(27, 7, 250, 0.02);
+    background-color: rgb(255, 255, 255);
+    margin-left: 1rem;
+    width: 70%;
+    height: 100%;
+}
+
+/* container where the table for the design is located */
+.containerTable{
+
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    width: 100%;
+    height: auto;
+}
+.categoria_form {
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+}
+
+
+
+
+/* ==== MOBILE RESPONSIVE ===*/
+@media (max-width: 768px) {
+
+    .container-balance {
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .containerCarts {
+        flex-direction: column;
+    }
+
+    .containerFirstRow {
+        width: 100%;
+        height: auto;
+    }
+
+    .containerSecondRow {
+        width: 100%;
+        height: 50%;
+        margin-left: 0;
+    }
+
+    
+}

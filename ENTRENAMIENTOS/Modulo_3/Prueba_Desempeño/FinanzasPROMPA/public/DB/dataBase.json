@@ -1,0 +1,38 @@
+{
+  "users": [
+    {
+      "id": "j01g",
+      "userName": "Guzman",
+      "userPassword": "2874"
+    },
+    {
+      "id": "k02m",
+      "userName": "Ramirez",
+      "userPassword": "5432"
+    }
+  ],
+  "categories": [
+    {
+      "id": "e91c",
+      "nameCategoria": "dfsdf"
+    }
+  ],
+  "operations": [
+    {
+      "id": "j01g",
+      "description": "ganancia",
+      "amount": "1000001",
+      "tipe": "gain",
+      "categoryId": null,
+      "date": "0123-03-12"
+    },
+    {
+      "id": "a086",
+      "description": "dads",
+      "amount": "32234",
+      "tipe": "Spent",
+      "categoryId": "e91c",
+      "date": "4234-02-11"
+    }
+  ]
+}
