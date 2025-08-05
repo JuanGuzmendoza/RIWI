@@ -17,22 +17,5 @@
       "nameCategoria": "dfsdf"
     }
   ],
-  "operations": [
-    {
-      "id": "j01g",
-      "description": "ganancia",
-      "amount": "1000001",
-      "tipe": "gain",
-      "categoryId": null,
-      "date": "0123-03-12"
-    },
-    {
-      "id": "a086",
-      "description": "dads",
-      "amount": "32234",
-      "tipe": "Spent",
-      "categoryId": "e91c",
-      "date": "4234-02-11"
-    }
-  ]
+  "operations": []
 }
